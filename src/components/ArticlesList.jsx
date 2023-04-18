@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getAllArticles } from "./utils";
-import SingleArticle from './SingleArticle'
+import ArticleCard from './ArticleCard';
 
 function ArticlesList(){
     const [allArticles, setAllArticles] = useState([]);
@@ -19,7 +19,7 @@ function ArticlesList(){
         <section>
             {allArticles.map((article)=>{
                 return (
-                   <SingleArticle key={article.article_id} article={article}/>
+                   <ArticleCard key={article.article_id} article={article}/>
                   )
               })}
         </section>
