@@ -1,4 +1,4 @@
-function SingleArticle (article){
+function ArticleCard (article){
     return(
         <section>
             <h4>{article.article.title}</h4>
@@ -11,4 +11,4 @@ function SingleArticle (article){
     )
 };
 
-export default SingleArticle;
+export default ArticleCard;

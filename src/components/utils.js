@@ -11,3 +11,11 @@ export const getAllArticles = () => {
         return res.data.articles;
     })
 };
+
+export const getSingleArticle = (article_id) => {
+    return newsApi
+    .get(`https://be-news-project.onrender.com/api/articles/${article_id}`)
+    .then(({data})=>{
+        return data.article;
+    })
+};
