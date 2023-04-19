@@ -1,26 +1,42 @@
-
 .App {
   text-align: center;
-  background-color: #fae3f7;
+  background-color: #E5E1E5;
 }
 
 .App-header {
-  padding: 0px;
-  text-align: center;
-  background: #f7abd1;
-  color: rgb(40, 1, 71);
-  font-size: 80px;
+  padding: 5px;
+  text-align: left;
+  background: #01a743;
+  color: #E5E1E5;
+  font-size: 4vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: start;
+  opacity: 70%;
+
 }
 
 .navbar {
-  background: #f7abd1;
+  background: #20c562(40, 1, 71);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 70%;
+}
+.commentsContainer{
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px; 
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.comment {
+ 
+  width: 300px;
+  border: 5px solid  #9166BF;
+  padding: 20px;
+  margin: 20px;
 }

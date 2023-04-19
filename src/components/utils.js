@@ -6,7 +6,7 @@ const newsApi = axios.create({
 
 export const getAllArticles = () => {
     return newsApi
-    .get('https://be-news-project.onrender.com/api/articles')
+    .get('/articles')
     .then((res)=>{
         return res.data.articles;
     })
@@ -14,8 +14,16 @@ export const getAllArticles = () => {
 
 export const getSingleArticle = (article_id) => {
     return newsApi
-    .get(`https://be-news-project.onrender.com/api/articles/${article_id}`)
+    .get(`/articles/${article_id}`)
     .then(({data})=>{
         return data.article;
     })
 };
+
+export const getComments = (article_id) =>{
+    return newsApi
+    .get(`/articles/${article_id}/comments`)
+    .then(({data})=>{
+        return data.comments;
+    })
+}

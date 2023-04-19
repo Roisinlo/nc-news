@@ -16,6 +16,7 @@ function ArticleById(){
             setIsLoading(false)
         })
     }, [])
+    
     return isLoading ? (<h3>Loading...</h3>) : (
         <section>
             {article.map((article) => {
