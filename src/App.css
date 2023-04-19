@@ -1,26 +1,42 @@
-
 .App {
   text-align: center;
   background-color: #fae3f7;
 }
 
 .App-header {
-  padding: 0px;
-  text-align: center;
-  background: #f7abd1;
-  color: rgb(40, 1, 71);
-  font-size: 80px;
+  padding: 5px;
+  text-align: left;
+  background: rgb(40, 1, 71);
+  color: #f7abd1;
+  font-size: 4vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  justify-content: start;
+  opacity: 70%;
+
 }
 
 .navbar {
-  background: #f7abd1;
+  background: rgb(40, 1, 71);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 70%;
+}
+.commenstAll{
+  justify-items: center;
+  justify-content: center;
+  grid-template-columns: 100px 50px 100px;
+  grid-template-rows: 80px auto 80px; 
+  column-gap: 10px;
+  row-gap: 15px;
+}
+
+.comment {
+ 
+  width: 300px;
+  border: 3px solid  rgb(40, 1, 71);
+  padding: 20px;
+  margin: 20px;
 }

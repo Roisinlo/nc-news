@@ -1,3 +1,7 @@
+import { useState, useEffect } from "react";
+import { getComments } from "./utils";
+import CommentsList from "./CommentList";
+
 function ArticleIdCard ({
     article_id,
     title,
@@ -8,6 +12,26 @@ function ArticleIdCard ({
     votes,
     article_img_url
 }){
+    const [isLoading, setIsLoading] = useState(true);
+    const [comments, setComments] = useState([]);
+    const [viewComments, setViewComments] = useState(false)
+
+    const handleClick= (event)=>{
+        setViewComments((viewComments)=>{
+            return !viewComments
+        })
+
+    }
+
+    useEffect(()=>{
+        setIsLoading(true)
+       getComments(article_id)
+       .then((comment)=>{
+
+            setComments(comment)
+            setIsLoading(false)
+       })
+    }, [])
 
     return(
         <section>
@@ -19,13 +43,15 @@ function ArticleIdCard ({
                 <div>
                     <p>The topic of this article is {topic}</p>
                     <p>Votes: {votes}</p>
-                    <button>Vote</button>
+                    <button>Vote for article</button>
                     <p>Comments: {votes}</p>
                     <p>Date: {created_at}</p>
                 </div>
             </li>
-            <button>View all comments</button>
             <button>Add comment</button>
+                <button onClick={handleClick}>View all comments</button>
+            {viewComments ? <CommentsList comments={comments}/> : null}
+
         </section>
     )
 };
