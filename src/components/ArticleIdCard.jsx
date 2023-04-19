@@ -3,14 +3,14 @@ import { getComments } from "./utils";
 import CommentsList from "./CommentList";
 
 function ArticleIdCard ({
-    article_id,
-    title,
-    topic,
     author,
-    body,
+    title,
+    article_id,
+    topic,
     created_at,
     votes,
-    article_img_url
+    article_img_url,
+    body
 }){
     const [isLoading, setIsLoading] = useState(true);
     const [comments, setComments] = useState([]);
@@ -44,7 +44,6 @@ function ArticleIdCard ({
                     <p>The topic of this article is {topic}</p>
                     <p>Votes: {votes}</p>
                     <button>Vote for article</button>
-                    <p>Comments: {votes}</p>
                     <p>Date: {created_at}</p>
                 </div>
             </li>

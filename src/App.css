@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-  background-color: #fae3f7;
+  background-color: #E5E1E5;
 }
 
 .App-header {
   padding: 5px;
   text-align: left;
-  background: rgb(40, 1, 71);
-  color: #f7abd1;
+  background: #01a743;
+  color: #E5E1E5;
   font-size: 4vh;
   display: flex;
   justify-content: start;
@@ -16,7 +16,7 @@
 }
 
 .navbar {
-  background: rgb(40, 1, 71);
+  background: #20c562(40, 1, 71);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   justify-content: center;
   opacity: 70%;
 }
-.commenstAll{
+.commentsContainer{
   justify-items: center;
   justify-content: center;
   grid-template-columns: 100px 50px 100px;
@@ -36,7 +36,7 @@
 .comment {
  
   width: 300px;
-  border: 3px solid  rgb(40, 1, 71);
+  border: 5px solid  #9166BF;
   padding: 20px;
   margin: 20px;
 }

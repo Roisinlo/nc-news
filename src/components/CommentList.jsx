@@ -1,6 +1,6 @@
 function CommentsList({ comments }) {
   return (
-    <section className="commentsAll">
+    <section className="commentsContainer">
       {comments.map((comment) => {
         return (
             <div className="comment" key={comment.comment_id}>
