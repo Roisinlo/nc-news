@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import ArticlesList from "./components/ArticlesList";
 import NavBar from "./components/NavBar";
 import ArticleById from "./components/ArticleById";
+import PostComment from "./components/PostComment";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<ArticlesList />} />
         <Route path="/articles" element={<ArticlesList />} />
         <Route path="/articles/:article_id" element={<ArticleById />} />
+        <Route path="/articles/:article_id/comment" element={<PostComment/>} />
       </Routes>
     </div>
     </section>

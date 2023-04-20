@@ -7,7 +7,8 @@ function CommentsList({ comments }) {
                 <p>Comment: {comment.body}</p>
                 <p>By: {comment.author}</p>
                 <p>Likes: {comment.votes}</p>
-                <button >Like this comment</button>
+                <button >Like</button>
+                <button >Unlike</button>
             </div>
       )})}
     </section>

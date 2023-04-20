@@ -36,3 +36,12 @@ export const patchArticleVotes = (article_id, vote) => {
         return data;
     })
 }
+
+
+export const postNewComment = (article_id) => {
+    return axios.post(`/articles/${article_id}/comments`)
+    .then(({data})=>{
+        console.log(data)
+        return data;
+    })
+}
