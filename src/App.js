@@ -1,3 +1,4 @@
+
 import "./App.css";
 import Header from "./components/Header";
 import { Route, Routes } from "react-router-dom";
@@ -7,15 +8,17 @@ import ArticleById from "./components/ArticleById";
 
 function App() {
   return (
-    <div className="App">
+    <section>
       <Header />
       <NavBar />
+    <div className="App">
       <Routes>
         <Route path="/" element={<ArticlesList />} />
         <Route path="/articles" element={<ArticlesList />} />
         <Route path="/articles/:article_id" element={<ArticleById />} />
       </Routes>
     </div>
+    </section>
   );
 }
 

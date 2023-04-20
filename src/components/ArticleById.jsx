@@ -15,10 +15,10 @@ function ArticleById(){
             setArticle(article)
             setIsLoading(false)
         })
-    }, [])
+    }, [article_id])
     
     return isLoading ? (<h3>Loading...</h3>) : (
-        <section>
+        <section className="article">
             {article.map((article) => {
                 return <ArticleIdCard key={article.article_id} {...article}/>
             })}
