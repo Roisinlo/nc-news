@@ -16,7 +16,7 @@ function ArticlesList(){
     }, [])
 
     return isLoading ? (<h3>Loading...</h3>) : (
-        <section>
+        <section className="commentsContainer">
             {allArticles.map((article)=>{
                 return (
                    <ArticleCard key={article.article_id} article={article}/>
