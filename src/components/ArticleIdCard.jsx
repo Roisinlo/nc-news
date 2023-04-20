@@ -17,10 +17,13 @@ function ArticleIdCard ({
     const [viewComments, setViewComments] = useState(false);
     const [articleVotes, setArticleVotes] = useState(votes);
     const [err, setErr] = useState(null);
+    const [liked, setLiked] = useState(false);
+    // const [disliked, setDisiked] = useState(false);
 
     const handleArticleLike= (event)=>{
+        setLiked(true);
         setArticleVotes((currentVote)=> currentVote + 1)
-        event.currentTarget.disabled = true
+        // event.currentTarget.disabled = true
         patchArticleVotes(article_id, 1)
         .catch((err)=>{
             setArticleVotes((currentVote)=>currentVote - 1);
@@ -29,6 +32,7 @@ function ArticleIdCard ({
     };
 
     const handleArticleDislike= (event)=>{
+        setLiked(false);
         setArticleVotes((currentVote)=> currentVote - 1)
         event.currentTarget.disabled = true
         patchArticleVotes(article_id, -1)
@@ -63,8 +67,9 @@ function ArticleIdCard ({
                 <p>{body}</p>
                 <div>
                     <p>The topic of this article is {topic}</p>
-                    <button onClick={handleArticleLike}>Like</button>
-                    <button onClick={handleArticleDislike}>Dislike</button>
+                    
+                    {!liked ? <button onClick={handleArticleLike}>Like</button> : null}
+                    {liked ? <button onClick={handleArticleDislike}>Dislike</button> : null}
                     {err ? <p>{err}</p> : (
                     <p>Likes: {articleVotes}</p>)}
                     <p>Date: {created_at}</p>
