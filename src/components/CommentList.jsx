@@ -1,5 +1,7 @@
 function CommentsList({ comments }) {
+
   return (
+
     <section className="commentsContainer">
       {comments.map((comment) => {
         return (
@@ -7,8 +9,8 @@ function CommentsList({ comments }) {
                 <p>Comment: {comment.body}</p>
                 <p>By: {comment.author}</p>
                 <p>Likes: {comment.votes}</p>
-                <button >Like</button>
-                <button >Unlike</button>
+                <button className="buttons">Like</button>
+                <button className="buttons">Unlike</button>
             </div>
       )})}
     </section>

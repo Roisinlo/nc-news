@@ -16,7 +16,7 @@ export const getSingleArticle = (article_id) => {
     return newsApi
     .get(`/articles/${article_id}`)
     .then(({data})=>{
-        return data.article;
+        return data.article[0];
     })
 };
 
@@ -37,10 +37,10 @@ export const patchArticleVotes = (article_id, vote) => {
 }
 
 
-export const postNewComment = (article_id) => {
-    return axios.post(`/articles/${article_id}/comments`)
+export const postNewComment = (article_id, body) => {
+    return newsApi
+    .post(`/articles/${article_id}/comments`, body)
     .then(({data})=>{
-        console.log(data)
-        return data;
+        return data.comment;
     })
 }
