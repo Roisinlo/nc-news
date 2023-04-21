@@ -8,7 +8,6 @@ function NavBar(){
 
     return(
         <section className="navbar">
-            <p>Nav</p>
             <button><Link to={"/"}>Home</Link></button>
             <button>Users/login</button>
         </section>
