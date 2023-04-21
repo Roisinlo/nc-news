@@ -66,7 +66,7 @@ function Article (){
                 <img src={article.article_img_url} alt={article_id} width='300' height-='auto'/>
                 <p>{article.body}</p>
                 <div>
-                    <p>The topic of this article is {article.topic}</p>
+                    <p>Topic: {article.topic}</p>
                     
                     {!liked ? <button className="buttons" onClick={handleArticleLike}>Like</button> : null}
                     {liked ? <button className="buttons" onClick={handleArticleDislike}>Dislike</button> : null}

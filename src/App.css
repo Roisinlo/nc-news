@@ -37,19 +37,21 @@
 
 .allArticle{
   width: 300px;
-  border: 5px solid  #695893;
+  border: 3px solid  #cac1e2;
   padding: 20px;
   margin: 20px;
   color: #151a60;
   font-family: 'Comfortaa', cursive;
+  border-radius: 15px;
 }
 .article{
   width: auto;
-  border: 5px solid  #695893;
+  border: 3px solid  #cac1e2;
   padding: 20px;
   margin: 20px;
   color: #151a60;
   font-family: 'Comfortaa', cursive;
+  border-radius: 15px;
 }
 
 .buttons{

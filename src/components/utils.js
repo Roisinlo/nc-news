@@ -4,11 +4,14 @@ const newsApi = axios.create({
     baseURL: 'https://be-news-project.onrender.com/api'
 });
 
-export const getAllArticles = () => {
+export const getAllArticles = (topic) => {
     return newsApi
     .get('/articles')
-    .then((res)=>{
-        return res.data.articles;
+    .then(({data})=>{
+        if(topic){
+            return data.articles.filter(article => {return article.topic === topic})
+        }
+        return data.articles;
     })
 };
 
