@@ -8,8 +8,8 @@ function NavBar(){
 
     return(
         <section className="navbar">
-            <button><Link to={"/"}>Home</Link></button>
-            <button>Users/login</button>
+            <button className="buttons"><Link to={"/"}>Home</Link></button>
+            <button className="buttons">Users/login</button>
         </section>
     )
 };

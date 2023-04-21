@@ -52,6 +52,31 @@
   font-family: 'Comfortaa', cursive;
 }
 
+.buttons{
+  font-family: 'Comfortaa', cursive;
+  border-radius: 15px;
+  border: none;
+  background-color: #8f36b9;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 5px;
+  margin: 4px 2px;
+  ;
+}
+
+.buttons:hover {
+  background-color: #d715e1; /* Green */
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(60, 2, 82, 0.24), 0 17px 50px 0 rgba(60, 2, 82, 0.24);
+}
+
+.button:active {
+  background-color: #a434dd;
+  box-shadow: 0 5px #2e045e;
+  transform: translateY(4px);
+}
+
 .commentsContainer{
   display: flex;
   align-self: center;

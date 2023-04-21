@@ -68,17 +68,17 @@ function Article (){
                 <div>
                     <p>The topic of this article is {article.topic}</p>
                     
-                    {!liked ? <button onClick={handleArticleLike}>Like</button> : null}
-                    {liked ? <button onClick={handleArticleDislike}>Dislike</button> : null}
+                    {!liked ? <button className="buttons" onClick={handleArticleLike}>Like</button> : null}
+                    {liked ? <button className="buttons" onClick={handleArticleDislike}>Dislike</button> : null}
                     {err ? <p>{err}</p> : (
                     <p>Likes: {articleVotes}</p>)}
                     <p>Date: {article.created_at}</p>
                 </div>
             </li>
-            <button onClick={handleAddComment}>Add comment</button>
+            <button className="buttons" onClick={handleAddComment}>Add comment</button>
             {addComment ? <PostComment article_id={article.article_id} setComments={setComments}/> : null}
 
-            <button onClick={handleCommentsClick}>View all comments</button>
+            <button className="buttons" onClick={handleCommentsClick}>View all comments</button>
             {viewComments ? <CommentsList comments={comments}/> : null}
 
         </section>

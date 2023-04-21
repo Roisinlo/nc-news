@@ -30,7 +30,7 @@ const handleSubmit= (event)=> {
             <label> Username: 
                 <input type='text' onChange={(event)=> setUsername(event.target.value)}/>
             </label>
-                <input type="submit" value="Submit" />
+                <input className="buttons" type="submit" value="Submit" />
             </section>
             </form>
         
