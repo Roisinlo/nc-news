@@ -35,8 +35,16 @@
   color: #181A33;
 }
 
-.article{
+.allArticle{
   width: 300px;
+  border: 5px solid  #695893;
+  padding: 20px;
+  margin: 20px;
+  color: #151a60;
+  font-family: 'Comfortaa', cursive;
+}
+.article{
+  width: auto;
   border: 5px solid  #695893;
   padding: 20px;
   margin: 20px;
