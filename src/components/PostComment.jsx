@@ -16,7 +16,7 @@ const handleSubmit= (event)=> {
     .then((resComment)=>{
         setComments((currentComment)=>[resComment, ...currentComment]);
     }).catch((err)=>{
-        setErr("Uh oh, please try again")
+        setErr("Uh oh, please fill in all fields and try again")
     })
 }
 
