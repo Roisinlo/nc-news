@@ -24,7 +24,9 @@ function App() {
     })
   }, [])
 
-  return (
+  return isLoading ? (
+    <h3 className="App-header">Loading...</h3>
+  ) : (
     <section>
       <Header />
       <NavBar topics={topics}/>

@@ -1,12 +1,7 @@
 import { Link } from "react-router-dom";
-import { useSearchParams } from "react-router-dom";
 
 function ArticleCard ({article, topic}){
-    let [searchParams, setSearchParams] = useSearchParams();
 
-    const handleTopicClick= (eve) => {
-
-    }
 
     return(
         <section className="allArticle">
