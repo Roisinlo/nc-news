@@ -4,16 +4,14 @@ const newsApi = axios.create({
     baseURL: 'https://be-news-project.onrender.com/api'
 });
 
-export const getAllArticles = (topic) => {
+export const getAllArticles = ({topic, sort_by, order}) => {
     return newsApi
-    .get('/articles')
+    .get('/articles', { params: {topic, sort_by, order}})
     .then(({data})=>{
-        if(topic){
-            return data.articles.filter(article => {return article.topic === topic})
-        }
         return data.articles;
     })
-};
+}
+
 
 export const getSingleArticle = (article_id) => {
     return newsApi
@@ -45,5 +43,13 @@ export const postNewComment = (article_id, body) => {
     .post(`/articles/${article_id}/comments`, body)
     .then(({data})=>{
         return data.comment;
+    })
+}
+
+export const getAllTopics = ()=> {
+    return newsApi
+    .get(`/topics`)
+    .then(({data})=>{
+        return data;
     })
 }
