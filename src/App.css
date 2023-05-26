@@ -36,6 +36,7 @@
   color: #181A33;
 }
 
+
 .allArticle{
   width: 300px;
   border: 3px solid  #cac1e2;
@@ -78,6 +79,27 @@
   background-color: #a434dd;
   box-shadow: 0 5px #2e045e;
   transform: translateY(4px);
+}
+
+.dropDown {
+  font-family: 'Comfortaa', cursive;
+  display:inline-flex;
+  justify-content: space-evenly;
+  border-radius: 15px;
+  border: none;
+  background-color: #8f36b9;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 5px 5px;
+  margin: 4px 2px;
+}
+
+.dropDownItems {
+  font-family: 'Comfortaa', cursive;
+  background-color:  #fff;
+  color:  #8f36b9;
+  cursor: pointer;
 }
 
 .commentsContainer{
